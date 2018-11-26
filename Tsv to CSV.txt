@@ -1,0 +1,8 @@
+import re
+tsv = open('3 vera.tsv', 'r')
+fileContent =  tsv.read()
+
+fileContent = re.sub("\t", ",", fileContent) # convert from tab to comma
+csv_file = open("3 vera.csv", "w")
+csv_file.write(fileContent)
+csv_file.close()
